@@ -1,6 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const title = React.createElement('h1', null, 'hellow react wililam and kaitlyn')
+//list 
+const songs = [
+    { id: 1, name: 'monkey dance' },
+    { id: 2, name: 'what makes you beautiful' },
+    { id: 3, name: 'fade to black' },
+]
 
-ReactDOM.render(title, document.getElementById('root'))
+const list = ( <
+        ul > {
+            songs.map(item => < li > { item.name } < /li>)} <
+                /ul>
+            )
+            //rendering elements 
+            ReactDOM.render(list, document.getElementById('root'))
